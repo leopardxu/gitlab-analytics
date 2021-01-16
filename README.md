@@ -1,5 +1,9 @@
 # gitlab-analytics 
 
+### changes
+
+* 修改了mysql root 密码，连接使用root 用户,降低使用难度；
+
 ### Goals
 * Improve the developers' enthusiasm to build more standard gitlab's project. 
 * Provide a guidance to the developers for gitlab's features. 
@@ -12,8 +16,6 @@
 * issues
 * comments
 * merge-requests
-
-![alt text](https://github.com/NDHWAlliance/gitlab-analytics/blob/master/display.jpeg)
 
 # Installation
 
@@ -32,7 +34,7 @@ build process;
 git clone https://github.com/NDHWAlliance/gitlab-analytics.git
 cd gitlab-analytics
 docker-compose build --build-arg INDEX_URL=https://mirrors.aliyun.com/pypi/simple ga
-docker-compose up mysql grafana ga
+docker-compose up mysql grafana ga -d
 ```
  
 ### Configuration
