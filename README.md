@@ -2,7 +2,8 @@
 
 ### changes
 
-* 修改了mysql root 密码，连接使用root 用户,降低使用难度；
+* 修改了mysql root 密码，连接使用root 用户,降低使用难度;
+* 修改默认python 源==》https://mirrors.aliyun.com/pypi/simple，更适合国人使用
 
 ### Goals
 * Improve the developers' enthusiasm to build more standard gitlab's project. 
@@ -34,7 +35,7 @@ build process;
 git clone https://github.com/NDHWAlliance/gitlab-analytics.git
 cd gitlab-analytics
 docker-compose build --build-arg INDEX_URL=https://mirrors.aliyun.com/pypi/simple ga
-docker-compose up mysql grafana ga -d
+docker-compose up -d mysql grafana ga
 ```
  
 ### Configuration
