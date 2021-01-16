@@ -5,4 +5,4 @@ datasources:
     url: "mysql:3306"
     database: "gitlab_analytics"
     user: "root"
-    password: "123456"
+    password: "gitlab-analytics"
