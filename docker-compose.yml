@@ -8,8 +8,8 @@ services:
       - PORT=8080
       - MYSQL_HOST=mysql
       - MYSQL_PORT=3306
-      - MYSQL_USER=ga
-      - MYSQL_PASSWORD=4t9wegcvbYSd
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=123456
       - MYSQL_DATABASE=gitlab_analytics
     depends_on:
       - mysql
@@ -30,10 +30,8 @@ services:
       - ./mysql/initdb:/docker-entrypoint-initdb.d
       - ./mysql/conf:/etc/mysql/conf.d
     environment:
-      - MYSQL_RANDOM_ROOT_PASSWORD=yes
+      - MYSQL_ROOT_PASSWORD=123456
       - MYSQL_DATABASE=gitlab_analytics
-      - MYSQL_USER=ga
-      - MYSQL_PASSWORD=4t9wegcvbYSd
     networks:
       - ganet
   grafana:
