@@ -4,5 +4,5 @@ datasources:
     type: "mysql"
     url: "mysql:3306"
     database: "gitlab_analytics"
-    user: "grafana"
-    password: "cqkjw-sN87onmLg|"
+    user: "root"
+    password: "123456"
