@@ -9,7 +9,7 @@ services:
       - MYSQL_HOST=mysql
       - MYSQL_PORT=3306
       - MYSQL_USER=root
-      - MYSQL_PASSWORD=123456
+      - MYSQL_PASSWORD=gitlab-analytics
       - MYSQL_DATABASE=gitlab_analytics
     depends_on:
       - mysql
@@ -30,7 +30,7 @@ services:
       - ./mysql/initdb:/docker-entrypoint-initdb.d
       - ./mysql/conf:/etc/mysql/conf.d
     environment:
-      - MYSQL_ROOT_PASSWORD=123456
+      - MYSQL_ROOT_PASSWORD=gitlab-analytics
       - MYSQL_DATABASE=gitlab_analytics
     networks:
       - ganet
